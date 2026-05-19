@@ -20,3 +20,4 @@ I will test create, get, update, and delete booking actions in Restful Booker.
   - Delete Booking
 - Verified API responses using Postman.
 - Documented test cases with expected results, actual results, and status.
+- Added Test_Cases.xlsx file with executed API test cases.
