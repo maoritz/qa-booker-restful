@@ -1,6 +1,6 @@
 # Bug Reports . Restful Booker QA Project
 
-## BUG-001 . Create Booking allows missing firstname
+## BUG-001 . Create Booking allows missing lastname
 
 **Jira ID:** KAN-4  
 **Related Test Case:** TC-005  
@@ -10,7 +10,7 @@
 
 ### Steps to Reproduce
 1. Open Postman and select the Create Booking request.
-2. Remove the firstname field from the request body.
+2. Remove the lastname field from the request body.
 3. Keep all other required fields valid.
 4. Click Send.
 
