@@ -24,7 +24,7 @@ Failed: 2
 Not Run: 0  
 
 ## Bugs Found
-- KAN-4 . Create Booking allows missing firstname
+- KAN-4 . Create Booking allows missing lastname
 - KAN-5 . Create Booking allows invalid checkin date value
 
 ## Risks
