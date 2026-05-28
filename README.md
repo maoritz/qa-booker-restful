@@ -1,23 +1,60 @@
-# qa-booker-restful
+# Restful Booker Manual & API QA Project
 
-About:
-This project is about identifying defects and verifying the expected behavior of the Restful Booker API.
+## About
+This project demonstrates manual and API testing of the Restful Booker API.
 
-Tools:
-I use Postman for API requests and Google Sheets for documenting test cases and tracking test execution.
+The goal of the project is to verify core booking functionality, test negative and edge case scenarios, document defects, and track failed test cases using Jira.
 
-What I will test:
-I will test create, get, update, and delete booking actions in Restful Booker.
+## Tested Features
+- Create Booking
+- Get Booking by ID
+- Update Booking
+- Delete Booking
+- Authentication
+- Negative input validation
+- Edge case scenarios
 
-## Current Progress
+## Tools Used
+- Postman
+- Jira
+- Google Sheets
+- GitHub
 
-- Created a basic GitHub repository for the QA project.
-- Added a Postman Collection for the Restful Booker API
-- Created and executed API test cases for:
-  - Create Booking
-  - Get Booking by ID
-  - Update Booking
-  - Delete Booking
-- Verified API responses using Postman.
-- Documented test cases with expected results, actual results, and status.
-- Added Test_Cases.xlsx file with executed API test cases.
+## Test Execution Summary
+- Total Test Cases: 19
+- Passed: 9
+- Failed: 10
+- Not Run: 0
+
+## Bugs Found
+The project includes documented Jira bugs from KAN-4 to KAN-12.
+
+Main issues found:
+- Missing required fields are accepted or handled incorrectly
+- Invalid date values are accepted
+- Missing booking date fields return 500 Internal Server Error
+- Checkout date before checkin date is accepted
+- Negative total price is accepted
+- Empty firstname is accepted
+- Special characters in firstname are accepted
+- Very long firstname is accepted
+
+## Repository Files
+- `Test_Cases.xlsx` . Full test cases with expected results, actual results, status, and Jira bug traceability
+- `Bug_Reports.md` . Documented bug reports with steps to reproduce, expected result, actual result, severity, and priority
+- `Test_Summary_Report.md` . Summary of test execution, bugs found, risks, and conclusion
+- `Postman Collection` . API requests used during testing
+- `evidence/` . Screenshots and evidence from Jira and test documentation
+
+## Traceability
+Failed test cases are linked to Jira bugs using the `Jira Bug` column in `Test_Cases.xlsx`.
+
+Example:
+- TC-015 -> KAN-10
+- TC-016 -> KAN-11
+- TC-017 -> KAN-12
+
+## Conclusion
+Core booking flows were tested successfully, including create, get, update, delete, and authentication-related scenarios.
+
+Negative and edge case testing found multiple validation issues in the Create Booking endpoint. These issues were documented in Jira and linked back to the relevant failed test cases.
