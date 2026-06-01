@@ -227,6 +227,136 @@ API returns 400 Bad Request or a validation error.
 Booking is not created.  
 Response does not contain a valid bookingid.
 
+---
+
+## BUG-010 . Create Booking allows empty string fields
+
+**Jira ID:** KAN-14  
+**Related Test Case:** TC-022  
+**Severity:** Medium  
+**Priority:** Medium  
+**Status:** To Do  
+
+### Steps to Reproduce
+1. Send POST /booking request.
+2. Set firstname, lastname, and additionalneeds as empty strings.
+3. Keep all other required fields valid.
+4. Send the request.
+
+### Expected Result
+API returns 400 Bad Request or a validation error.  
+Booking is not created.  
+Response does not contain a valid bookingid.
+
+### Actual Result
+API returned 200 OK.  
+Booking was created successfully with empty string fields.  
+Response returned a valid bookingid.
+
+---
+
+## BUG-011 . Create Booking allows totalprice value 0
+
+**Jira ID:** KAN-15  
+**Related Test Case:** TC-024  
+**Severity:** Medium  
+**Priority:** Medium  
+**Status:** To Do  
+
+### Steps to Reproduce
+1. Send POST /booking request.
+2. Set totalprice to 0.
+3. Keep all other required fields valid.
+4. Send the request.
+
+### Expected Result
+API returns 400 Bad Request or a validation error.  
+Booking is not created.  
+Response does not contain a valid bookingid.
+
+### Actual Result
+API returned 200 OK.  
+Booking was created successfully with totalprice value 0.  
+Response returned a valid bookingid.
+
+---
+
+## BUG-012 . Create Booking returns 500 when totalprice field is missing
+
+**Jira ID:** KAN-16  
+**Related Test Case:** TC-025  
+**Severity:** Medium  
+**Priority:** Medium  
+**Status:** To Do  
+
+### Steps to Reproduce
+1. Send POST /booking request.
+2. Remove the totalprice field from the request body.
+3. Keep all other required fields valid.
+4. Send the request.
+
+### Expected Result
+API returns 400 Bad Request or a validation error.  
+Booking is not created.  
+Response does not contain a valid bookingid.
+
+### Actual Result
+API returned 500 Internal Server Error.  
+Booking was not created.  
+No bookingid was returned.
+
+---
+
+## BUG-013 . Create Booking returns 500 when depositpaid field is missing
+
+**Jira ID:** KAN-17  
+**Related Test Case:** TC-026  
+**Severity:** Medium  
+**Priority:** Medium  
+**Status:** To Do  
+
+### Steps to Reproduce
+1. Send POST /booking request.
+2. Remove the depositpaid field from the request body.
+3. Keep all other required fields valid.
+4. Send the request.
+
+### Expected Result
+API returns 400 Bad Request or a validation error.  
+Booking is not created.  
+Response does not contain a valid bookingid.
+
+### Actual Result
+API returned 500 Internal Server Error.  
+Booking was not created.  
+No bookingid was returned.
+
+---
+
+## BUG-014 . Create Booking allows invalid depositpaid value
+
+**Jira ID:** KAN-18  
+**Related Test Case:** TC-027  
+**Severity:** Medium  
+**Priority:** Medium  
+**Status:** To Do  
+
+### Steps to Reproduce
+1. Send POST /booking request.
+2. Set depositpaid to an invalid value: "yes".
+3. Keep all other required fields valid.
+4. Send the request.
+
+### Expected Result
+API returns 400 Bad Request or a validation error.  
+Booking is not created.  
+Response does not contain a valid bookingid.
+
+### Actual Result
+API returned 200 OK.  
+Booking was created successfully with invalid depositpaid value.  
+Response returned a valid bookingid.
+
 ### Actual Result
 API returned 200 OK.  
 Booking was created successfully with invalid date format.  
