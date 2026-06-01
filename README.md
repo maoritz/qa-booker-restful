@@ -21,13 +21,13 @@ The goal of the project is to verify core booking functionality, test negative a
 - GitHub
 
 ## Test Execution Summary
-- Total Test Cases: 19
-- Passed: 9
-- Failed: 10
+- Total Test Cases: 30
+- Passed: 15
+- Failed: 15
 - Not Run: 0
 
 ## Bugs Found
-The project includes documented Jira bugs from KAN-4 to KAN-12.
+The project includes documented Jira bugs from KAN-4 to KAN-12 and KAN-14 to KAN-18.
 
 Main issues found:
 - Missing required fields are accepted or handled incorrectly
