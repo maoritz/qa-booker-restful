@@ -21,10 +21,10 @@ Manual and API testing for core booking flows:
 - GitHub
 
 ## Test Execution Summary
-Total Test Cases: 19  
-Passed: 9  
-Failed: 10  
-Not Run: 0  
+Total Test Cases: 30
+Passed: 15
+Failed: 15
+Not Run: 0
 
 ## Bugs Found
 - KAN-4 . Create Booking allows missing lastname
@@ -36,6 +36,11 @@ Not Run: 0
 - KAN-10 . Create Booking allows special characters in firstname
 - KAN-11 . Create Booking allows very long firstname
 - KAN-12 . Create Booking allows invalid date format
+- KAN-14 . Create Booking allows empty string fields
+- KAN-15 . Create Booking allows totalprice value 0
+- KAN-16 . Create Booking returns 500 when totalprice field is missing
+- KAN-17 . Create Booking returns 500 when depositpaid field is missing
+- KAN-18 . Create Booking allows invalid depositpaid value
 
 ## Risks
 The Create Booking endpoint allows several invalid or incomplete input values, including missing fields, invalid date values, invalid date order, negative price, empty firstname, special characters, and very long firstname values.
