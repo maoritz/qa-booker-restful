@@ -227,6 +227,11 @@ API returns 400 Bad Request or a validation error.
 Booking is not created.  
 Response does not contain a valid bookingid.
 
+### Actual Result
+API returned 200 OK.  
+Booking was created successfully with invalid date format.  
+Response returned a valid bookingid.
+
 ---
 
 ## BUG-010 . Create Booking allows empty string fields
@@ -355,9 +360,4 @@ Response does not contain a valid bookingid.
 ### Actual Result
 API returned 200 OK.  
 Booking was created successfully with invalid depositpaid value.  
-Response returned a valid bookingid.
-
-### Actual Result
-API returned 200 OK.  
-Booking was created successfully with invalid date format.  
 Response returned a valid bookingid.
